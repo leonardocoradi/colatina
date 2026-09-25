@@ -7,6 +7,7 @@ import WhatsAppButton from "@/components/WhatsAppButton";
 import DifferentialsSection from "@/components/DifferentialsSection";
 import PurposeSection from "@/components/PurposeSection";
 import AboutSection from "@/components/AboutSection";
+import ClientsSection from "@/components/ClientsSection";
 
 const Index = () => {
   return (
@@ -17,6 +18,7 @@ const Index = () => {
       <ServicesSection />
       <DifferentialsSection />
       <PurposeSection />
+      <ClientsSection />
       <CTASection />
       <Footer />
       <WhatsAppButton />
