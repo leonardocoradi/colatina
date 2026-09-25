@@ -1,68 +1,51 @@
 import { motion } from "framer-motion";
 import aboutImage from "@/assets/about-team.png";
 
-const AboutSection = () => {
-  return (
-    <section id="quem-somos" className="py-16 lg:py-24 bg-background relative overflow-hidden">
-      <div className="container px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="order-2 lg:order-1"
-          >
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl tracking-tight mb-6 lg:mb-8 text-center lg:text-left">
-              <span className="text-gradient-fire">QUEM</span>{" "}
-              <span className="text-foreground">SOMOS</span>
-            </h2>
-            
-            <div className="space-y-4 lg:space-y-6 text-base lg:text-lg text-muted-foreground leading-relaxed text-center lg:text-left">
-              <p>
-                Somos uma empresa especializada no transporte de pequenas e médias encomendas, 
-                oferecendo agilidade, segurança e compromisso em cada entrega.
-              </p>
-              <p>
-                Contamos com uma equipe de profissionais altamente capacitados e experientes no setor, 
-                preparados para atender com eficiência e responsabilidade, garantindo que sua 
-                encomenda chegue ao destino com rapidez e total cuidado.
-              </p>
-              <p>
-                Nosso objetivo é facilitar o seu dia a dia, proporcionando um serviço confiável 
-                e de qualidade, sempre priorizando a satisfação dos nossos clientes.
-              </p>
-            </div>
-            
-            <div className="mt-8 lg:mt-10 flex justify-center lg:justify-start">
-              <div className="h-1.5 w-24 bg-gradient-fire rounded-full" />
-            </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, scale: 0.9 }}
-            whileInView={{ opacity: 1, scale: 1 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.8 }}
-            className="relative order-1 lg:order-2"
-          >
-            <div className="absolute -inset-4 bg-gradient-fire opacity-10 blur-2xl rounded-full lg:opacity-20" />
-            <div className="relative rounded-2xl overflow-hidden border border-border shadow-fire group aspect-[4/3] lg:aspect-auto">
-              <img
-                src={aboutImage}
-                alt="Equipe Colatina Express"
-                className="w-full h-full lg:h-auto object-cover transition-transform duration-700 group-hover:scale-110"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-background/80 via-transparent to-transparent lg:from-background/60" />
-            </div>
-            
-            {/* Decorative elements - hidden on small mobile to avoid clutter */}
-            <div className="hidden sm:block absolute -bottom-6 -right-6 h-32 w-32 bg-gradient-fire opacity-10 blur-3xl rounded-full" />
-          </motion.div>
+const AboutSection = () => (
+  <section id="sobre-nos" className="scroll-mt-20 bg-[#080b10] py-16 text-white sm:py-20 lg:py-24">
+    <div className="container grid items-center gap-10 px-6 lg:grid-cols-2 lg:gap-16">
+      <motion.div
+        initial={{ opacity: 0, x: -24 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="order-2 lg:order-1"
+      >
+        <p className="mb-3 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.2em] text-[#f5b900]">
+          <span className="h-[3px] w-8 bg-[#f5b900]" /> Sobre nós
+        </p>
+        <h2 className="max-w-xl text-3xl font-extrabold leading-tight sm:text-4xl lg:text-[2.65rem]">
+          Uma empresa feita para levar o seu negócio <span className="text-[#f5b900]">mais longe.</span>
+        </h2>
+        <div className="mt-5 max-w-xl space-y-3 text-sm leading-relaxed text-white/75 sm:text-base">
+          <p>
+            A Colatina Express é uma empresa que nasceu no desejo de facilitar e agilizar as entregas de mercadorias. Sabemos que cada carga é importante e que a eficiência e a agilidade na entrega fazem toda a diferença para o sucesso do seu negócio.
+          </p>
+          <p>
+            Por isso, investimos em estrutura, tecnologia e em uma equipe qualificada para oferecer soluções logísticas com segurança, pontualidade e cuidado em cada etapa do transporte.
+          </p>
         </div>
-      </div>
-    </section>
-  );
-};
+        <p className="mt-6 border-l-4 border-[#f5b900] pl-4 text-sm font-semibold leading-relaxed text-white sm:text-base">
+          Nosso compromisso é ser mais que um transportador: <span className="text-[#f5b900]">um parceiro estratégico para o crescimento da sua empresa.</span>
+        </p>
+      </motion.div>
+
+      <motion.div
+        initial={{ opacity: 0, x: 24 }}
+        whileInView={{ opacity: 1, x: 0 }}
+        viewport={{ once: true }}
+        transition={{ duration: 0.6 }}
+        className="relative order-1 overflow-hidden lg:order-2"
+      >
+        <img src={aboutImage} alt="Equipe de logística trabalhando em conjunto" className="aspect-[4/3] w-full object-cover" loading="lazy" />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
+        <p className="absolute bottom-5 right-5 max-w-xs text-right text-base font-semibold italic text-white sm:text-lg">
+          Logística eficiente é<br /> sinônimo de <span className="text-[#f5b900]">resultados.</span>
+        </p>
+        <span className="absolute bottom-0 left-0 top-0 w-2 bg-[#f5b900]" />
+      </motion.div>
+    </div>
+  </section>
+);
 
 export default AboutSection;

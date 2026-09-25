@@ -1,15 +1,15 @@
 import { motion } from "framer-motion";
 import { ArrowRight, FileText, Truck } from "lucide-react";
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/hero-van.jpg";
+import heroImage from "@/assets/hero-truck.png";
 
 const HeroSection = () => (
-  <section className="relative isolate flex min-h-[760px] min-h-screen items-center overflow-hidden bg-[#080a0d] pt-20">
+  <section className="relative isolate flex min-h-[680px] items-center overflow-hidden bg-[#080a0d] pt-20 lg:min-h-[min(780px,88vh)]">
     <div className="absolute inset-0 -z-20">
       <img
         src={heroImage}
-        alt="Van da Colatina Express na estrada ao entardecer"
-        className="h-full w-full object-cover object-[62%_center]"
+        alt="Caminhão Colatina Express Transportes na estrada ao entardecer"
+        className="h-full w-full object-cover object-[56%_center]"
         fetchPriority="high"
       />
     </div>
@@ -27,7 +27,7 @@ const HeroSection = () => (
         <div className="mb-5 flex items-center gap-4">
           <span className="h-1 w-14 bg-[#f5b900]" />
           <span className="text-sm font-semibold uppercase tracking-[0.24em] text-white sm:text-base">
-            Seja bem-vindo à
+            Quem somos
           </span>
         </div>
 

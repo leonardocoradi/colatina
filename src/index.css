@@ -15,7 +15,7 @@
     --popover: 0 0% 12%;
     --popover-foreground: 0 0% 95%;
 
-    --primary: 0 80% 45%;
+    --primary: 45 100% 48%;
     --primary-foreground: 0 0% 100%;
 
     --secondary: 40 90% 50%;
@@ -32,19 +32,19 @@
 
     --border: 0 0% 20%;
     --input: 0 0% 20%;
-    --ring: 0 80% 45%;
+    --ring: 45 100% 48%;
 
     --radius: 0.75rem;
 
     --gold: 40 90% 50%;
     --gold-dark: 35 85% 38%;
-    --crimson: 0 80% 45%;
-    --crimson-dark: 0 75% 30%;
+    --crimson: 45 100% 48%;
+    --crimson-dark: 38 95% 38%;
 
-    --gradient-fire: linear-gradient(135deg, hsl(0 80% 45%), hsl(30 90% 50%), hsl(45 95% 55%));
+    --gradient-fire: linear-gradient(135deg, hsl(43 100% 45%), hsl(45 100% 52%), hsl(50 100% 62%));
     --gradient-dark: linear-gradient(180deg, hsl(0 0% 6%), hsl(0 0% 12%));
     --gradient-gold: linear-gradient(135deg, hsl(45 95% 55%), hsl(35 85% 38%));
-    --shadow-fire: 0 0 40px -10px hsl(0 80% 45% / 0.5);
+    --shadow-fire: 0 0 40px -10px hsl(45 100% 48% / 0.4);
     --shadow-gold: 0 0 30px -5px hsl(40 90% 50% / 0.4);
   }
 }
@@ -59,7 +59,7 @@
   }
 
   h1, h2, h3, h4, h5, h6 {
-    @apply font-display;
+    @apply font-body;
   }
 }
 

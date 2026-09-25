@@ -1,15 +1,15 @@
 import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { Menu, Truck, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const links = [
-  { to: "/", label: "Início" },
-  { to: "/quem-somos", label: "Sobre nós" },
-  { to: "/nossa-missao", label: "Serviços" },
-  { to: "/area-de-atuacao", label: "Diferenciais" },
-  { to: "/solicitar-coleta", label: "Contato" },
+  { href: "/", label: "Início" },
+  { href: "/#sobre-nos", label: "Quem somos" },
+  { href: "/#especializacao", label: "Serviços" },
+  { href: "/#diferenciais", label: "Diferenciais" },
+  { href: "/#contato", label: "Contato" },
 ];
 
 const Navbar = () => {
@@ -23,17 +23,14 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">
-          {links.map(({ to, label }) => (
-            <NavLink
-              key={to}
-              to={to}
-              end={to === "/"}
-              className={({ isActive }) =>
-                `relative py-2 text-xs font-semibold uppercase tracking-wide transition-colors ${isActive ? "text-[#f5b900] after:absolute after:inset-x-0 after:-bottom-1 after:h-0.5 after:bg-[#f5b900]" : "text-white/80 hover:text-white"}`
-              }
+          {links.map(({ href, label }) => (
+            <a
+              key={href}
+              href={href}
+              className="relative py-2 text-xs font-semibold uppercase tracking-wide text-white/80 transition-colors hover:text-[#f5b900]"
             >
               {label}
-            </NavLink>
+            </a>
           ))}
         </div>
 
@@ -64,16 +61,15 @@ const Navbar = () => {
             className="overflow-hidden border-t border-white/10 bg-[#080a0d] lg:hidden"
           >
             <div className="flex flex-col gap-1 p-5">
-              {links.map(({ to, label }) => (
-                <NavLink
-                  key={to}
-                  to={to}
-                  end={to === "/"}
+              {links.map(({ href, label }) => (
+                <a
+                  key={href}
+                  href={href}
                   onClick={() => setOpen(false)}
-                  className={({ isActive }) => `rounded-md px-3 py-3 text-sm font-semibold uppercase tracking-wide ${isActive ? "text-[#f5b900]" : "text-white/80 hover:bg-white/5 hover:text-white"}`}
+                  className="rounded-md px-3 py-3 text-sm font-semibold uppercase tracking-wide text-white/80 hover:bg-white/5 hover:text-[#f5b900]"
                 >
                   {label}
-                </NavLink>
+                </a>
               ))}
               <Link
                 to="/solicitar-coleta"

@@ -1,59 +1,29 @@
 import { motion } from "framer-motion";
+import { ArrowRight, MessageCircle } from "lucide-react";
 import { Link } from "react-router-dom";
-import { ArrowRight, Phone } from "lucide-react";
-import warehouseImage from "@/assets/warehouse.jpg";
+import heroImage from "@/assets/hero-van.jpg";
 
-const CTASection = () => {
-  return (
-    <section className="relative py-24 overflow-hidden">
-      <div className="absolute inset-0">
-        <img
-          src={warehouseImage}
-          alt="Centro de distribuição"
-          className="h-full w-full object-cover"
-          loading="lazy"
-          width={1920}
-          height={800}
-        />
-        <div className="absolute inset-0 bg-background/85 backdrop-blur-sm" />
-      </div>
-
-      <div className="container relative z-10 px-6 text-center">
-        <motion.div
-          initial={{ opacity: 0, y: 30 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          viewport={{ once: true }}
-          className="max-w-2xl mx-auto"
-        >
-          <h2 className="text-4xl sm:text-6xl tracking-tight mb-6">
-            <span className="text-foreground">PRECISA ENVIAR</span>
-            <br />
-            <span className="text-gradient-fire">UMA ENCOMENDA?</span>
-          </h2>
-          <p className="text-lg text-muted-foreground mb-10 max-w-lg mx-auto">
-            Não quebre a cabeça! Solicite sua coleta agora mesmo pelo WhatsApp e receba no mesmo dia.
-          </p>
-
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-            <Link
-              to="/solicitar-coleta"
-              className="inline-flex items-center gap-3 rounded-lg bg-gradient-fire px-10 py-5 text-xl font-display tracking-wider text-primary-foreground transition-transform hover:scale-105 shadow-fire"
-            >
-              SOLICITAR COLETA
-              <ArrowRight className="h-6 w-6" />
-            </Link>
-            <a
-              href="tel:+5527997357959"
-              className="inline-flex items-center gap-2 rounded-lg border border-border bg-card/60 px-8 py-5 text-xl font-display tracking-wide text-foreground backdrop-blur-sm transition-all hover:bg-card"
-            >
-              <Phone className="h-5 w-5 text-secondary" />
-              (27) 99735-7959
-            </a>
-          </div>
-        </motion.div>
-      </div>
-    </section>
-  );
-};
+const CTASection = () => (
+  <section id="contato" className="scroll-mt-20 relative isolate overflow-hidden bg-[#080b10] py-14 text-white sm:py-16 lg:py-20">
+    <img src={heroImage} alt="Estrada ao entardecer" className="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center]" loading="lazy" />
+    <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#080b10] via-[#080b10]/90 to-[#080b10]/25" />
+    <div className="container px-6">
+      <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-xl">
+        <p className="mb-3 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-white/85">
+          <span className="h-[3px] w-8 bg-[#f5b900]" /> Juntos, movemos
+        </p>
+        <h2 className="text-3xl font-extrabold uppercase leading-tight sm:text-4xl">
+          Grandes <span className="text-[#f5b900]">conquistas.</span>
+        </h2>
+        <p className="mt-3 max-w-md text-sm leading-relaxed text-white/75 sm:text-base">
+          Conte com a Colatina Express para transportar o que é essencial para o seu negócio. Estamos prontos para ser seu parceiro em todas as rotas.
+        </p>
+        <Link to="/solicitar-coleta" className="mt-5 inline-flex items-center gap-3 rounded-full bg-[#f5b900] px-5 py-3 text-sm font-bold text-[#101318] transition hover:bg-[#ffd13d]">
+          <MessageCircle className="h-4 w-4" /> Solicite uma cotação <ArrowRight className="h-4 w-4" />
+        </Link>
+      </motion.div>
+    </div>
+  </section>
+);
 
 export default CTASection;
