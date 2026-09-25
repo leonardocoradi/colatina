@@ -18,6 +18,7 @@ const Footer = () => (
         <p className="font-bold text-white">Colatina Express Transportes</p>
         <p>Conectando destinos. Impulsionando o seu negócio.</p>
         <a href="tel:+5527997357959" className="mt-1 inline-block hover:text-[#f5b900]">(27) 99735-7959</a>
+        <a href="mailto:comercial@colatinaexpress.com.br" className="mt-1 block hover:text-[#f5b900]">comercial@colatinaexpress.com.br</a>
       </div>
     </div>
     <p className="container mt-5 px-6 text-center text-[10px] text-white/45 lg:text-left">
