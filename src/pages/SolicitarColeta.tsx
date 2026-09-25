@@ -34,23 +34,23 @@ const SolicitarColeta = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
       
-      <main className="flex-1 pt-32 pb-24 relative overflow-hidden">
+      <main className="relative flex-1 overflow-hidden px-0 pb-12 pt-24 sm:pb-24 sm:pt-32">
         {/* Decorative Background */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[2px] bg-gradient-fire opacity-40 blur-sm" />
         <div className="absolute top-20 right-10 h-64 w-64 bg-gradient-fire opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
         <div className="absolute bottom-20 left-10 h-64 w-64 bg-gradient-gold opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />
 
-        <div className="container px-6 relative z-10">
+        <div className="container relative z-10 px-4 sm:px-6">
           <motion.div
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="text-center mb-12"
+            className="mb-8 text-center sm:mb-12"
           >
-            <h1 className="text-4xl sm:text-5xl lg:text-5xl tracking-tight mb-4 text-foreground">
+            <h1 className="mb-4 text-3xl tracking-tight text-foreground sm:text-5xl lg:text-5xl">
               SOLICITAR <span className="text-gradient-fire">COLETA</span>
             </h1>
-            <p className="text-muted-foreground text-lg max-w-2xl mx-auto">
+            <p className="mx-auto max-w-2xl text-base text-muted-foreground sm:text-lg">
               Preencha os dados da sua encomenda abaixo para agilizarmos seu atendimento via WhatsApp.
             </p>
           </motion.div>
@@ -63,7 +63,7 @@ const SolicitarColeta = () => {
           >
             <div className="absolute -inset-1 bg-gradient-fire opacity-20 blur-xl rounded-2xl transition-opacity group-hover:opacity-30" />
             
-            <div className="relative border border-border bg-card/60 backdrop-blur-md rounded-2xl p-8 sm:p-10 shadow-xl">
+            <div className="relative rounded-2xl border border-border bg-card/60 p-4 shadow-xl backdrop-blur-md sm:p-10">
               <form onSubmit={handleSubmit} className="space-y-6">
                 
                 {/* Tipo de Mercadoria */}
@@ -148,7 +148,7 @@ const SolicitarColeta = () => {
                 {/* Submit Button */}
                 <button
                   type="submit"
-                  className="mt-8 w-full inline-flex items-center justify-center gap-2 rounded-lg bg-gradient-fire px-8 py-4 text-lg font-display tracking-wide text-primary-foreground transition-transform hover:scale-[1.02] shadow-fire"
+                  className="mt-8 inline-flex w-full items-center justify-center gap-2 rounded-lg bg-gradient-fire px-4 py-4 text-sm font-display tracking-wide text-primary-foreground shadow-fire transition-transform hover:scale-[1.02] sm:px-8 sm:text-lg"
                 >
                   ENVIAR SOLICITAÇÃO VIA WHATSAPP
                   <Send className="h-5 w-5" />

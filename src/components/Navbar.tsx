@@ -16,10 +16,10 @@ const Navbar = () => {
   const [open, setOpen] = useState(false);
 
   return (
-    <nav className="absolute inset-x-0 top-0 z-40 border-b border-white/10 bg-[#080a0d]/85 backdrop-blur-md">
-      <div className="container flex h-20 items-center justify-between px-6">
+    <nav className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-[#080a0d]/90 backdrop-blur-md">
+      <div className="container flex h-16 items-center justify-between px-4 sm:h-20 sm:px-6">
         <Link to="/" aria-label="Colatina Express — início" className="shrink-0">
-          <img src={logo} alt="Colatina Express Transportes" className="h-[4.5rem] w-auto object-contain" />
+          <img src={logo} alt="Colatina Express Transportes" className="h-14 w-auto object-contain sm:h-[4.5rem]" />
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">

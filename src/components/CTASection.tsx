@@ -7,7 +7,7 @@ const CTASection = () => (
   <section id="contato" className="scroll-mt-20 relative isolate overflow-hidden bg-[#080b10] py-14 text-white sm:py-16 lg:py-20">
     <img src={heroImage} alt="Estrada ao entardecer" className="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_center]" loading="lazy" />
     <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#080b10] via-[#080b10]/90 to-[#080b10]/25" />
-    <div className="container px-6">
+    <div className="container px-4 sm:px-6">
       <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }} className="max-w-xl">
         <p className="mb-3 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-white/85">
           <span className="h-[3px] w-8 bg-[#f5b900]" /> Juntos, movemos

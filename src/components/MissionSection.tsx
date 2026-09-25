@@ -7,8 +7,8 @@ const MissionSection = () => {
       {/* Decorative glow */}
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[2px] bg-gradient-fire opacity-40" />
 
-      <div className="container px-6">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-16 items-center">
+      <div className="container px-4 sm:px-6">
+        <div className="grid grid-cols-1 items-center gap-8 sm:gap-10 lg:grid-cols-2 lg:gap-16">
           
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -38,12 +38,12 @@ const MissionSection = () => {
             transition={{ duration: 0.8 }}
             className="order-2 lg:order-2"
           >
-            <h2 className="text-4xl sm:text-5xl lg:text-7xl tracking-tight mb-6 lg:mb-8 text-center lg:text-left">
+            <h2 className="mb-6 text-3xl tracking-tight text-center sm:mb-8 sm:text-5xl lg:text-left lg:text-7xl">
               <span className="text-gradient-fire">NOSSA</span>{" "}
               <span className="text-foreground">MISSÃO</span>
             </h2>
             
-            <div className="space-y-4 lg:space-y-6 text-base lg:text-lg text-muted-foreground leading-relaxed text-center lg:text-left">
+            <div className="space-y-4 text-base leading-relaxed text-muted-foreground text-center lg:space-y-6 lg:text-left lg:text-lg">
               <p>
                 Nossa missão é otimizar o dia a dia dos nossos clientes, oferecendo soluções ágeis, seguras e eficientes para o envio de encomendas. 
               </p>

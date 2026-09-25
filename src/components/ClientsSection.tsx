@@ -15,7 +15,7 @@ const clients = [
 
 const ClientsSection = () => (
   <section id="clientes" className="scroll-mt-20 bg-[#080b10] py-14 text-white sm:py-16 lg:py-20">
-    <div className="container px-6">
+    <div className="container px-4 sm:px-6">
       <div className="mb-8 grid gap-5 md:grid-cols-[1fr_1fr] md:items-end md:gap-10">
         <motion.div initial={{ opacity: 0, y: 16 }} whileInView={{ opacity: 1, y: 0 }} viewport={{ once: true }}>
           <p className="mb-3 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.18em] text-white/80">
