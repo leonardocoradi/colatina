@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import aboutImage from "@/assets/about-team.png";
+import aboutImage from "@/assets/about-logistics.png";
 
 const AboutSection = () => (
   <section id="sobre-nos" className="scroll-mt-20 bg-[#080b10] py-16 text-white sm:py-20 lg:py-24">
@@ -37,7 +37,7 @@ const AboutSection = () => (
         transition={{ duration: 0.6 }}
         className="relative order-1 overflow-hidden lg:order-2"
       >
-        <img src={aboutImage} alt="Equipe de logística trabalhando em conjunto" className="aspect-[4/3] w-full object-cover" loading="lazy" />
+        <img src={aboutImage} alt="Profissional da Colatina Express acompanhando a movimentação de cargas no centro logístico" className="aspect-[4/3] w-full object-cover" loading="lazy" />
         <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent" />
         <p className="absolute bottom-5 right-5 max-w-xs text-right text-base font-semibold italic text-white sm:text-lg">
           Logística eficiente é<br /> sinônimo de <span className="text-[#f5b900]">resultados.</span>
