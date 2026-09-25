@@ -4,8 +4,17 @@ import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-truck.png";
 
 const HeroSection = () => (
-  <section className="relative isolate flex min-h-[100svh] items-center overflow-hidden bg-[#080a0d] pt-16 sm:min-h-[680px] sm:pt-20 lg:min-h-[min(780px,88vh)]">
-    <div className="absolute inset-0 -z-20">
+  <section className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-[#080a0d] pt-16 md:min-h-[min(780px,88vh)] md:flex-row md:items-center md:pt-20">
+    <div className="relative w-full shrink-0 md:hidden">
+      <img
+        src={heroImage}
+        alt="Caminhão Colatina Express Transportes na estrada ao entardecer"
+        className="aspect-video w-full object-contain"
+        fetchPriority="high"
+      />
+      <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-[#080a0d]" />
+    </div>
+    <div className="absolute inset-0 -z-20 hidden md:block">
       <img
         src={heroImage}
         alt="Caminhão Colatina Express Transportes na estrada ao entardecer"
@@ -13,11 +22,11 @@ const HeroSection = () => (
         fetchPriority="high"
       />
     </div>
-    <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#080a0d] via-[#080a0d]/90 to-[#080a0d]/10" />
-    <div className="absolute inset-0 -z-10 bg-gradient-to-t from-[#080a0d]/70 via-transparent to-[#080a0d]/20" />
-    <div className="absolute inset-y-0 left-0 -z-10 w-[58%] bg-[linear-gradient(105deg,rgba(5,7,9,.55),transparent)]" />
+    <div className="absolute inset-0 -z-10 hidden bg-gradient-to-r from-[#080a0d] via-[#080a0d]/90 to-[#080a0d]/10 md:block" />
+    <div className="absolute inset-0 -z-10 hidden bg-gradient-to-t from-[#080a0d]/70 via-transparent to-[#080a0d]/20 md:block" />
+    <div className="absolute inset-y-0 left-0 -z-10 hidden w-[58%] bg-[linear-gradient(105deg,rgba(5,7,9,.55),transparent)] md:block" />
 
-    <div className="container px-4 pb-12 pt-10 sm:px-6 sm:pb-24 sm:pt-16">
+    <div className="container relative z-10 w-full px-4 pb-8 pt-5 sm:px-6 md:pb-24 md:pt-16">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
@@ -48,10 +57,10 @@ const HeroSection = () => (
           </p>
         </div>
 
-        <div className="mt-5 flex flex-col gap-3 sm:mt-7 sm:flex-row">
+        <div className="mt-5 flex flex-col gap-3 sm:mt-7 sm:flex-col md:flex-row">
           <Link
             to="/quem-somos"
-            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-[#f5b900] px-4 py-3 text-[11px] font-bold uppercase tracking-wide text-[#111] transition hover:bg-[#ffd13d] sm:w-auto sm:gap-3 sm:px-6 sm:text-sm"
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full bg-[#f5b900] px-4 py-3 text-[11px] font-bold uppercase tracking-wide text-[#111] transition hover:bg-[#ffd13d] md:w-auto md:gap-3 md:px-6 md:text-sm"
           >
             <Truck className="h-5 w-5" />
             Conheça a Colatina Express
@@ -59,7 +68,7 @@ const HeroSection = () => (
           </Link>
           <Link
             to="/solicitar-coleta"
-            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-white/70 bg-black/20 px-4 py-3 text-[11px] font-bold uppercase tracking-wide text-white backdrop-blur-sm transition hover:bg-white/10 sm:w-auto sm:gap-3 sm:px-6 sm:text-sm"
+            className="inline-flex min-h-12 w-full items-center justify-center gap-2 rounded-full border border-white/70 bg-black/20 px-4 py-3 text-[11px] font-bold uppercase tracking-wide text-white backdrop-blur-sm transition hover:bg-white/10 md:w-auto md:gap-3 md:px-6 md:text-sm"
           >
             <FileText className="h-5 w-5" />
             Solicite uma cotação
