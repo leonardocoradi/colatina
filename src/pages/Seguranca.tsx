@@ -136,17 +136,17 @@ const Seguranca = () => (
         </div>
       </section>
 
-      <section className="relative isolate overflow-hidden border-b border-[#f5b900]/30">
-        <img src={truckImage} alt="Caminhão Colatina Express seguindo pela estrada" className="absolute inset-0 -z-20 h-full w-full object-cover object-[70%_54%]" />
-        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#03070c] via-[#03070c]/85 to-[#03070c]/45" />
-        <div className="container flex min-h-[260px] flex-col items-center justify-between gap-6 px-5 py-9 text-center sm:min-h-[300px] sm:flex-row sm:px-8 sm:text-left">
+      <section className="relative isolate overflow-hidden border-y border-[#f5b900]/30">
+        <img src={truckImage} alt="Caminhão Colatina Express seguindo pela estrada ao pôr do sol" className="absolute inset-0 -z-20 h-full w-full object-cover object-[72%_58%]" />
+        <div className="absolute inset-0 -z-10 bg-gradient-to-r from-[#03070c]/95 via-[#03070c]/75 to-[#03070c]/35" />
+        <div className="container flex min-h-[170px] flex-col items-center justify-center gap-4 px-5 py-6 text-center sm:min-h-[190px] sm:flex-row sm:justify-between sm:gap-8 sm:px-8 sm:text-left">
           <div className="max-w-2xl">
-            <p className="mb-3 flex items-center justify-center gap-3 text-xs font-bold uppercase tracking-[0.16em] text-white/75 sm:justify-start">
-              <span className="h-[2px] w-7 bg-[#f5b900]" /> Tecnologia e pessoas trabalhando juntas
+            <p className="mb-2 flex items-center justify-center gap-3 text-[10px] font-bold uppercase tracking-[0.14em] text-white/85 sm:justify-start sm:text-xs">
+              <span className="h-[2px] w-7 shrink-0 bg-[#f5b900]" /> Tecnologia e pessoas trabalhando juntas
             </p>
-            <h2 className="text-2xl font-black uppercase leading-tight sm:text-3xl">Para levar o que é importante <span className="text-[#f5b900]">até você.</span></h2>
+            <h2 className="text-base font-bold uppercase leading-snug sm:text-lg">Para levar o que é importante <span className="text-[#f5b900]">até você.</span></h2>
           </div>
-          <img src={logo} alt="Colatina Express Transportes" className="h-20 w-auto max-w-[220px] object-contain sm:h-24 sm:max-w-[250px]" />
+          <img src={logo} alt="Colatina Express Transportes" className="h-14 w-auto max-w-[170px] object-contain sm:h-[4.5rem] sm:max-w-[210px]" />
         </div>
       </section>
     </div>
