@@ -9,6 +9,9 @@ import QuemSomos from "./pages/QuemSomos.tsx";
 import NossaMissao from "./pages/NossaMissao.tsx";
 import AreaDeAtuacao from "./pages/AreaDeAtuacao.tsx";
 import SolicitarColeta from "./pages/SolicitarColeta.tsx";
+import Servicos from "./pages/Servicos.tsx";
+import Seguranca from "./pages/Seguranca.tsx";
+import Clientes from "./pages/Clientes.tsx";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -34,6 +37,10 @@ const App = () => (
           <Route path="/nossa-missao" element={<NossaMissao />} />
           <Route path="/area-de-atuacao" element={<AreaDeAtuacao />} />
           <Route path="/solicitar-coleta" element={<SolicitarColeta />} />
+          <Route path="/contato" element={<SolicitarColeta />} />
+          <Route path="/servicos" element={<Servicos />} />
+          <Route path="/seguranca" element={<Seguranca />} />
+          <Route path="/clientes" element={<Clientes />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

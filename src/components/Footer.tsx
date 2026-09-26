@@ -9,10 +9,11 @@ const Footer = () => (
       </Link>
       <nav aria-label="Navegação do rodapé" className="flex flex-wrap justify-center gap-x-6 gap-y-2 text-xs text-white/75">
         <Link to="/" className="hover:text-[#f5b900]">Início</Link>
-        <a href="/#sobre-nos" className="hover:text-[#f5b900]">Quem somos</a>
-        <a href="/#especializacao" className="hover:text-[#f5b900]">Serviços</a>
-        <a href="/#diferenciais" className="hover:text-[#f5b900]">Diferenciais</a>
-        <a href="/#contato" className="hover:text-[#f5b900]">Contato</a>
+        <Link to="/quem-somos" className="hover:text-[#f5b900]">Quem Somos</Link>
+        <Link to="/servicos" className="hover:text-[#f5b900]">Serviços</Link>
+        <Link to="/seguranca" className="hover:text-[#f5b900]">Segurança</Link>
+        <Link to="/clientes" className="hover:text-[#f5b900]">Clientes</Link>
+        <Link to="/contato" className="hover:text-[#f5b900]">Contato</Link>
       </nav>
       <div className="border-l-0 border-[#f5b900] pl-0 text-center text-xs text-white/70 lg:border-l lg:pl-5 lg:text-left">
         <p className="font-bold text-white">Colatina Express Transportes</p>

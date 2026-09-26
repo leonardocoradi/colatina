@@ -5,12 +5,12 @@ import { Menu, Truck, X } from "lucide-react";
 import logo from "@/assets/logo.png";
 
 const links = [
-  { href: "/", label: "Início" },
-  { href: "/#sobre-nos", label: "Quem somos" },
-  { href: "/#especializacao", label: "Serviços" },
-  { href: "/#diferenciais", label: "Diferenciais" },
-  { href: "/#clientes", label: "Clientes" },
-  { href: "/#contato", label: "Contato" },
+  { to: "/", label: "Início" },
+  { to: "/quem-somos", label: "Quem Somos" },
+  { to: "/servicos", label: "Serviços" },
+  { to: "/seguranca", label: "Segurança" },
+  { to: "/clientes", label: "Clientes" },
+  { to: "/contato", label: "Contato" },
 ];
 
 const Navbar = () => {
@@ -24,19 +24,19 @@ const Navbar = () => {
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">
-          {links.map(({ href, label }) => (
-            <a
-              key={href}
-              href={href}
+          {links.map(({ to, label }) => (
+            <Link
+              key={to}
+              to={to}
               className="relative py-2 text-xs font-semibold uppercase tracking-wide text-white/80 transition-colors hover:text-[#f5b900]"
             >
               {label}
-            </a>
+            </Link>
           ))}
         </div>
 
         <Link
-          to="/solicitar-coleta"
+          to="/contato"
           className="hidden items-center gap-2 rounded-full bg-[#f5b900] px-5 py-3 text-xs font-bold uppercase text-[#111] transition hover:bg-[#ffd13d] lg:inline-flex"
         >
           <Truck className="h-4 w-4" />
@@ -62,18 +62,18 @@ const Navbar = () => {
             className="overflow-hidden border-t border-white/10 bg-[#080a0d] lg:hidden"
           >
             <div className="flex flex-col gap-1 p-5">
-              {links.map(({ href, label }) => (
-                <a
-                  key={href}
-                  href={href}
+              {links.map(({ to, label }) => (
+                <Link
+                  key={to}
+                  to={to}
                   onClick={() => setOpen(false)}
                   className="rounded-md px-3 py-3 text-sm font-semibold uppercase tracking-wide text-white/80 hover:bg-white/5 hover:text-[#f5b900]"
                 >
                   {label}
-                </a>
+                </Link>
               ))}
               <Link
-                to="/solicitar-coleta"
+                to="/contato"
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#f5b900] px-5 py-3 text-sm font-bold uppercase text-[#111]"
               >
