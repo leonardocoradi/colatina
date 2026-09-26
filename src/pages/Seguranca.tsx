@@ -55,15 +55,15 @@ const Seguranca = () => (
   <InteriorPageLayout>
     <div className="overflow-hidden bg-[#050a10] text-white">
       <section className="relative isolate">
-        <div className="relative min-h-[660px] overflow-hidden sm:min-h-[700px] lg:min-h-[660px]">
+        <div className="relative min-h-[620px] overflow-hidden sm:min-h-[680px] lg:min-h-[660px]">
           <img
             src={truckImage}
             alt="Caminhão Colatina Express em uma estrada ao pôr do sol"
-            className="h-[270px] w-full object-cover object-[48%_52%] sm:h-[360px] lg:absolute lg:inset-0 lg:h-full lg:object-[58%_50%]"
+            className="absolute inset-x-0 top-0 h-[250px] w-full object-cover object-[48%_52%] sm:h-[330px] lg:inset-0 lg:h-full lg:object-[58%_50%]"
           />
-          <div className="absolute inset-x-0 top-[170px] h-[120px] bg-gradient-to-b from-transparent to-[#050a10] sm:top-[260px] sm:h-[130px] lg:inset-0 lg:h-auto lg:bg-gradient-to-r lg:from-[#050a10] lg:via-[#050a10]/90 lg:via-40% lg:to-[#050a10]/5" />
-          <div className="absolute inset-x-0 top-[238px] bottom-0 bg-[#050a10] sm:top-[330px] lg:top-0 lg:bg-transparent" />
-          <div className="container relative z-10 flex min-h-[660px] flex-col justify-end px-5 pb-7 sm:min-h-[700px] sm:px-8 sm:pb-8 lg:min-h-[660px] lg:justify-center lg:pb-28">
+          <div className="absolute inset-x-0 top-[155px] h-[110px] bg-gradient-to-b from-transparent to-[#050a10] sm:top-[245px] sm:h-[100px] lg:inset-0 lg:h-auto lg:bg-gradient-to-r lg:from-[#050a10] lg:via-[#050a10]/90 lg:via-40% lg:to-[#050a10]/5" />
+          <div className="absolute inset-x-0 top-[250px] bottom-0 bg-[#050a10] sm:top-[330px] lg:top-0 lg:bg-transparent" />
+          <div className="container relative z-10 flex min-h-[620px] flex-col justify-end px-5 pb-7 sm:min-h-[680px] sm:px-8 sm:pb-8 lg:min-h-[660px] lg:justify-center lg:pb-28">
             <div className="max-w-[570px]">
               <p className="mb-4 flex items-center gap-3 text-xs font-bold uppercase tracking-[0.15em] text-white sm:text-sm">
                 <ShieldCheck className="h-7 w-7 text-[#f5b900] sm:h-9 sm:w-9" />
@@ -117,7 +117,7 @@ const Seguranca = () => (
             </div>
           </div>
 
-          <div className="relative min-h-[320px] overflow-hidden rounded-sm border border-white/10 sm:min-h-[420px] lg:min-h-[500px]">
+          <div className="relative aspect-[4/3] min-h-[250px] overflow-hidden rounded-sm border border-white/10 sm:aspect-[16/10] sm:min-h-[350px] lg:aspect-auto lg:min-h-[500px]">
             <img src={monitoringImage} alt="Central de monitoramento da Colatina Express com mapa de rotas, veículos rastreados e operadores" className="absolute inset-0 h-full w-full object-cover object-[50%_50%]" />
           </div>
         </div>

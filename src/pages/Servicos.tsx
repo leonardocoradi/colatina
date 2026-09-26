@@ -13,51 +13,53 @@ import {
 import { Link } from "react-router-dom";
 import InteriorPageLayout from "@/components/InteriorPageLayout";
 import truckImage from "@/assets/hero-truck.png";
-import logisticsImage from "@/assets/about-logistics.png";
-import warehouseImage from "@/assets/warehouse.jpg";
-import monitoringImage from "@/assets/security-monitoring.png";
+import interstateImage from "@/assets/service-interstate.jpg";
+import containerRemovalImage from "@/assets/service-container-removal.jpg";
+import containerMovementImage from "@/assets/service-container-movement.jpg";
+import emptyContainerImage from "@/assets/service-empty-container.jpg";
+import warehousingImage from "@/assets/service-warehousing.jpg";
 
 const services = [
   {
     title: "Transporte interestadual e intermunicipal",
     description: "Levamos sua carga a diferentes destinos com planejamento, acompanhamento e cuidado em cada etapa.",
     icon: Truck,
-    image: truckImage,
-    imagePosition: "50% 55%",
+    image: interstateImage,
+    imagePosition: "50% 44%",
   },
   {
     title: "Remoção de containers",
     description: "Operações de remoção organizadas para movimentar containers com segurança e eficiência.",
     icon: Package,
-    image: logisticsImage,
+    image: containerRemovalImage,
     imagePosition: "50% 50%",
   },
   {
     title: "Movimentação de containers",
     description: "Apoio à movimentação de cargas e containers com atenção à operação e aos prazos.",
     icon: Boxes,
-    image: warehouseImage,
+    image: containerMovementImage,
     imagePosition: "50% 55%",
   },
   {
     title: "Transporte de containers cheios",
     description: "Transporte planejado para levar sua carga ao destino com integridade e acompanhamento.",
     icon: Truck,
-    image: truckImage,
-    imagePosition: "75% 58%",
+    image: containerRemovalImage,
+    imagePosition: "38% 54%",
   },
   {
     title: "Entrega de containers vazios",
     description: "Entrega coordenada conforme as necessidades da operação e o cronograma combinado.",
     icon: PackageCheck,
-    image: monitoringImage,
-    imagePosition: "72% 50%",
+    image: emptyContainerImage,
+    imagePosition: "48% 50%",
   },
   {
     title: "Armazenagem",
     description: "Estrutura logística para apoiar o controle, a organização e a guarda de mercadorias.",
     icon: Warehouse,
-    image: warehouseImage,
+    image: warehousingImage,
     imagePosition: "50% 50%",
   },
 ];
@@ -181,7 +183,7 @@ const Servicos = () => (
             <h2 className="text-sm font-extrabold uppercase leading-snug sm:text-base">Precisa de um serviço específico ou de uma cotação personalizada?</h2>
           </div>
           <p className="text-xs leading-relaxed text-white/70 sm:text-sm">Nossa equipe está pronta para entender sua demanda e encontrar a solução logística ideal.</p>
-          <Link to="/contato" className="inline-flex min-h-11 items-center justify-center gap-3 rounded-full bg-[#f5b900] px-6 py-3 text-xs font-extrabold uppercase text-[#111] transition-colors hover:bg-[#ffd13d] sm:text-sm">
+          <Link to="/contato" className="inline-flex min-h-12 w-full items-center justify-center gap-3 rounded-full bg-[#f5b900] px-6 py-3 text-xs font-extrabold uppercase text-[#111] transition-colors hover:bg-[#ffd13d] md:w-fit sm:text-sm">
             Solicite uma cotação <ArrowRight className="h-4 w-4" />
           </Link>
         </div>

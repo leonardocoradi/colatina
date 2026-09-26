@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-[#080a0d]/90 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between px-4 sm:h-20 sm:px-6">
         <Link to="/" aria-label="Colatina Express — início" className="shrink-0">
-          <img src={logo} alt="Colatina Express Transportes" className="h-14 w-auto origin-left scale-[1.35] object-contain sm:h-[4.5rem]" />
+          <img src={logo} alt="Colatina Express Transportes" className="h-14 w-auto max-w-[54vw] origin-left scale-[1.35] object-contain sm:h-[4.5rem] sm:max-w-none" />
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">
@@ -44,7 +44,7 @@ const Navbar = () => {
         </Link>
 
         <button
-          className="text-white lg:hidden"
+          className="grid h-10 w-10 shrink-0 place-items-center rounded-md text-white transition hover:bg-white/10 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#f5b900] lg:hidden"
           onClick={() => setOpen((value) => !value)}
           aria-label={open ? "Fechar menu" : "Abrir menu"}
           aria-expanded={open}
@@ -59,7 +59,7 @@ const Navbar = () => {
             initial={{ height: 0, opacity: 0 }}
             animate={{ height: "auto", opacity: 1 }}
             exit={{ height: 0, opacity: 0 }}
-            className="overflow-hidden border-t border-white/10 bg-[#080a0d] lg:hidden"
+            className="max-h-[calc(100dvh-4rem)] overflow-y-auto overscroll-contain border-t border-white/10 bg-[#080a0d] sm:max-h-[calc(100dvh-5rem)] lg:hidden"
           >
             <div className="flex flex-col gap-1 p-5">
               {links.map(({ to, label }) => (
@@ -67,7 +67,7 @@ const Navbar = () => {
                   key={to}
                   to={to}
                   onClick={() => setOpen(false)}
-                  className="rounded-md px-3 py-3 text-sm font-semibold uppercase tracking-wide text-white/80 hover:bg-white/5 hover:text-[#f5b900]"
+                  className="flex min-h-12 items-center rounded-md px-3 py-3 text-sm font-semibold uppercase tracking-wide text-white/80 hover:bg-white/5 hover:text-[#f5b900]"
                 >
                   {label}
                 </Link>

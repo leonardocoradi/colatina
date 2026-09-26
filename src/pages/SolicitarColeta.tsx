@@ -34,7 +34,7 @@ const SolicitarColeta = () => {
     <div className="min-h-screen bg-background flex flex-col">
       <Navbar />
       
-      <main className="relative flex-1 overflow-hidden px-0 pb-12 pt-24 sm:pb-24 sm:pt-32">
+      <main className="relative flex-1 overflow-hidden px-0 pb-12 pt-20 sm:pb-24 sm:pt-24">
         {/* Decorative Background */}
         <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[2px] bg-gradient-fire opacity-40 blur-sm" />
         <div className="absolute top-20 right-10 h-64 w-64 bg-gradient-fire opacity-[0.05] blur-[100px] rounded-full pointer-events-none" />

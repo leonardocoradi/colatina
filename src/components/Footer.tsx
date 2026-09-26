@@ -2,7 +2,7 @@ import { Link } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Footer = () => (
-  <footer className="border-t border-white/15 bg-[#05070a] py-7 text-white">
+  <footer className="border-t border-white/15 bg-[#05070a] px-0 pb-24 pt-7 text-white lg:pb-7">
     <div className="container flex flex-col items-center justify-between gap-6 px-4 sm:px-6 lg:flex-row">
       <Link to="/" aria-label="Colatina Express — início" className="shrink-0">
         <img src={logo} alt="Colatina Express Transportes" className="h-16 w-auto object-contain" />
