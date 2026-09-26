@@ -5,17 +5,14 @@ import {
   Crosshair,
   Handshake,
   MapPin,
-  Radio,
   Satellite,
   ShieldCheck,
   UsersRound,
 } from "lucide-react";
 import InteriorPageLayout from "@/components/InteriorPageLayout";
 import truckImage from "@/assets/hero-truck.png";
-import monitoringImage from "@/assets/about-logistics.png";
+import monitoringImage from "@/assets/security-monitoring.png";
 import logo from "@/assets/logo.png";
-
-const gold = "#f5b900";
 
 const heroHighlights = [
   { icon: Crosshair, title: "Rastreamento", detail: "em tempo real" },
@@ -53,38 +50,6 @@ const values = [
   { icon: Clock3, title: "Pontualidade", detail: "em cada trajeto" },
   { icon: Handshake, title: "Compromisso", detail: "com o seu negócio" },
 ];
-
-const TrackingPanel = () => (
-  <div
-    className="absolute bottom-4 left-4 right-4 rounded-xl border border-white/15 bg-[#07111ddd] p-3 shadow-2xl backdrop-blur-md sm:bottom-6 sm:left-6 sm:right-auto sm:w-[min(310px,calc(100%-3rem))] sm:p-4"
-    aria-label="Painel ilustrativo de acompanhamento de veículos"
-  >
-    <div className="flex items-center justify-between gap-3 border-b border-white/10 pb-3">
-      <div>
-        <p className="text-[9px] font-bold uppercase tracking-[0.2em] text-white/55">Central de monitoramento</p>
-        <p className="mt-1 text-xs font-bold text-white sm:text-sm">Acompanhamento da frota</p>
-      </div>
-      <span className="flex shrink-0 items-center gap-1.5 rounded-full border border-emerald-400/25 bg-emerald-400/10 px-2 py-1 text-[9px] font-semibold uppercase tracking-wide text-emerald-300">
-        <span className="h-1.5 w-1.5 rounded-full bg-emerald-300" /> Operação
-      </span>
-    </div>
-    <div className="relative mt-3 h-24 overflow-hidden rounded-lg border border-white/10 bg-[#0d1b26] sm:h-28">
-      <div className="absolute inset-0 opacity-30" style={{ backgroundImage: "linear-gradient(rgba(255,255,255,.12) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.12) 1px, transparent 1px)", backgroundSize: "24px 24px" }} />
-      <svg viewBox="0 0 300 110" className="absolute inset-0 h-full w-full" aria-hidden="true">
-        <path d="M18 85 C58 80 53 28 100 36 S153 92 194 68 S242 28 282 31" fill="none" stroke={gold} strokeWidth="2.5" strokeDasharray="5 5" />
-        <path d="M32 22 C73 28 89 75 127 74 S184 21 218 42 S252 83 282 87" fill="none" stroke="#71b8d5" strokeWidth="1.5" strokeDasharray="4 5" opacity=".8" />
-        <circle cx="18" cy="85" r="5" fill={gold} /><circle cx="194" cy="68" r="5" fill={gold} /><circle cx="282" cy="31" r="5" fill={gold} />
-        <circle cx="127" cy="74" r="4" fill="#71b8d5" /><circle cx="218" cy="42" r="4" fill="#71b8d5" />
-      </svg>
-      <span className="absolute left-[5%] top-[65%] rounded bg-[#07111d]/80 px-1.5 py-0.5 text-[8px] font-semibold text-white/85">ES-101</span>
-      <span className="absolute right-[5%] top-[10%] rounded bg-[#07111d]/80 px-1.5 py-0.5 text-[8px] font-semibold text-white/85">ES-204</span>
-    </div>
-    <div className="mt-3 flex items-center justify-between gap-2 text-[9px] text-white/65 sm:text-[10px]">
-      <span className="inline-flex items-center gap-1.5"><MapPin className="h-3 w-3 text-[#f5b900]" /> Rotas acompanhadas</span>
-      <span className="inline-flex items-center gap-1.5"><Radio className="h-3 w-3 text-[#f5b900]" /> Sinal ativo</span>
-    </div>
-  </div>
-);
 
 const Seguranca = () => (
   <InteriorPageLayout>
@@ -153,9 +118,7 @@ const Seguranca = () => (
           </div>
 
           <div className="relative min-h-[320px] overflow-hidden rounded-sm border border-white/10 sm:min-h-[420px] lg:min-h-[500px]">
-            <img src={monitoringImage} alt="Profissional da Colatina Express acompanhando a operação logística no centro de distribuição" className="absolute inset-0 h-full w-full object-cover object-[52%_50%]" />
-            <div className="absolute inset-0 bg-gradient-to-t from-[#02070d]/65 via-transparent to-[#02070d]/10" />
-            <TrackingPanel />
+            <img src={monitoringImage} alt="Central de monitoramento da Colatina Express com mapa de rotas, veículos rastreados e operadores" className="absolute inset-0 h-full w-full object-cover object-[50%_50%]" />
           </div>
         </div>
       </section>
