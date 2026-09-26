@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-[#080a0d]/90 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between px-4 sm:h-20 sm:px-6">
         <Link to="/" aria-label="Colatina Express — início" className="shrink-0">
-          <img src={logo} alt="Colatina Express Transportes" className="h-16 w-auto max-w-[62vw] object-contain sm:h-20 sm:max-w-none" />
+          <img src={logo} alt="Colatina Express Transportes" className="h-16 w-auto max-w-[68vw] object-contain sm:h-20 sm:max-w-none" />
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">
