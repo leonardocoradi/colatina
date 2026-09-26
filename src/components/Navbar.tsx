@@ -2,7 +2,7 @@ import { useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import { Menu, Truck, X } from "lucide-react";
-import logo from "@/assets/logo.png";
+import logo from "@/assets/header-logo.png";
 
 const links = [
   { to: "/", label: "Início" },
@@ -20,7 +20,7 @@ const Navbar = () => {
     <nav className="fixed inset-x-0 top-0 z-40 border-b border-white/10 bg-[#080a0d]/90 backdrop-blur-md">
       <div className="container flex h-16 items-center justify-between px-4 sm:h-20 sm:px-6">
         <Link to="/" aria-label="Colatina Express — início" className="shrink-0">
-          <img src={logo} alt="Colatina Express Transportes" className="h-14 w-auto max-w-[54vw] origin-left scale-[1.35] object-contain sm:h-[4.5rem] sm:max-w-none" />
+          <img src={logo} alt="Colatina Express Transportes" className="h-16 w-auto max-w-[62vw] object-contain sm:h-20 sm:max-w-none" />
         </Link>
 
         <div className="hidden items-center gap-7 lg:flex">
