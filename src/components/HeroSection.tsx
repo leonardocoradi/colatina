@@ -36,7 +36,7 @@ const HeroSection = () => (
         <div className="mb-5 flex items-center gap-4">
           <span className="h-1 w-14 bg-[#f5b900]" />
           <span className="text-sm font-semibold uppercase tracking-[0.24em] text-white sm:text-base">
-            Quem somos
+            Seja bem-vindo à
           </span>
         </div>
 

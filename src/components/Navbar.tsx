@@ -9,6 +9,7 @@ const links = [
   { href: "/#sobre-nos", label: "Quem somos" },
   { href: "/#especializacao", label: "Serviços" },
   { href: "/#diferenciais", label: "Diferenciais" },
+  { href: "/#clientes", label: "Clientes" },
   { href: "/#contato", label: "Contato" },
 ];
 
