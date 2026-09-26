@@ -4,15 +4,15 @@ import { Link } from "react-router-dom";
 import heroImage from "@/assets/hero-truck.png";
 
 const HeroSection = () => (
-  <section className="relative isolate flex min-h-[100svh] flex-col overflow-hidden bg-[#080a0d] pt-16 md:min-h-[min(780px,88vh)] md:flex-row md:items-center md:pt-20">
-    <div className="relative w-full shrink-0 md:hidden">
+  <section className="relative isolate flex min-h-screen items-center overflow-hidden bg-[#080a0d] pt-16 md:pt-20">
+    <div className="absolute inset-0 -z-20 md:hidden">
       <img
         src={heroImage}
         alt="Caminhão Colatina Express Transportes na estrada ao entardecer"
-        className="aspect-video w-full object-contain"
+        className="h-full w-full object-cover object-[56%_center]"
         fetchPriority="high"
       />
-      <div className="absolute inset-x-0 bottom-0 h-20 bg-gradient-to-b from-transparent to-[#080a0d]" />
+      <div className="absolute inset-0 bg-gradient-to-b from-[#080a0d]/65 via-[#080a0d]/65 to-[#080a0d]/85" />
     </div>
     <div className="absolute inset-0 -z-20 hidden md:block">
       <img
@@ -26,7 +26,7 @@ const HeroSection = () => (
     <div className="absolute inset-0 -z-10 hidden bg-gradient-to-t from-[#080a0d]/70 via-transparent to-[#080a0d]/20 md:block" />
     <div className="absolute inset-y-0 left-0 -z-10 hidden w-[58%] bg-[linear-gradient(105deg,rgba(5,7,9,.55),transparent)] md:block" />
 
-    <div className="container relative z-10 w-full px-4 pb-8 pt-5 sm:px-6 md:pb-24 md:pt-16">
+    <div className="container relative z-10 w-full px-4 py-10 sm:px-6 md:py-16 md:pb-24">
       <motion.div
         initial={{ opacity: 0, y: 24 }}
         animate={{ opacity: 1, y: 0 }}
