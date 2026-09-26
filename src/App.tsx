@@ -12,6 +12,7 @@ import SolicitarColeta from "./pages/SolicitarColeta.tsx";
 import Servicos from "./pages/Servicos.tsx";
 import Seguranca from "./pages/Seguranca.tsx";
 import Clientes from "./pages/Clientes.tsx";
+import Contato from "./pages/Contato.tsx";
 
 const queryClient = new QueryClient({
   defaultOptions: {
@@ -37,7 +38,7 @@ const App = () => (
           <Route path="/nossa-missao" element={<NossaMissao />} />
           <Route path="/area-de-atuacao" element={<AreaDeAtuacao />} />
           <Route path="/solicitar-coleta" element={<SolicitarColeta />} />
-          <Route path="/contato" element={<SolicitarColeta />} />
+          <Route path="/contato" element={<Contato />} />
           <Route path="/servicos" element={<Servicos />} />
           <Route path="/seguranca" element={<Seguranca />} />
           <Route path="/clientes" element={<Clientes />} />

@@ -36,7 +36,7 @@ const Navbar = () => {
         </div>
 
         <Link
-          to="/contato"
+          to="/solicitar-coleta"
           className="hidden items-center gap-2 rounded-full bg-[#f5b900] px-5 py-3 text-xs font-bold uppercase text-[#111] transition hover:bg-[#ffd13d] lg:inline-flex"
         >
           <Truck className="h-4 w-4" />
@@ -73,7 +73,7 @@ const Navbar = () => {
                 </Link>
               ))}
               <Link
-                to="/contato"
+                to="/solicitar-coleta"
                 onClick={() => setOpen(false)}
                 className="mt-2 inline-flex items-center justify-center gap-2 rounded-full bg-[#f5b900] px-5 py-3 text-sm font-bold uppercase text-[#111]"
               >

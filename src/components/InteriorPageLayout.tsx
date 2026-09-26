@@ -4,7 +4,7 @@ import Footer from "@/components/Footer";
 import Navbar from "@/components/Navbar";
 import WhatsAppButton from "@/components/WhatsAppButton";
 
-const InteriorPageLayout = ({ children }: { children: ReactNode }) => {
+const InteriorPageLayout = ({ children, showWhatsApp = true }: { children: ReactNode; showWhatsApp?: boolean }) => {
   const { pathname } = useLocation();
 
   useEffect(() => {
@@ -16,7 +16,7 @@ const InteriorPageLayout = ({ children }: { children: ReactNode }) => {
       <Navbar />
       <main className="flex-1 pt-16 sm:pt-20">{children}</main>
       <Footer />
-      <WhatsAppButton />
+      {showWhatsApp && <WhatsAppButton />}
     </div>
   );
 };
